@@ -1,0 +1,164 @@
+<html lang="en">
+<!-- 
+Script tag is not working code is fine  -->
+
+
+<head>
+    <title>Nike</title>
+    <style>
+        body {
+            margin: 0%;
+            border: 0%;
+            background-color: black;
+
+        }
+
+        #cont {
+            width: 70vw;
+            height: 80vh;
+            margin: 5vh auto;
+            padding: 2% 5%;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        #LHS {
+            height: 95%;
+            width: 25%;
+            border: 1px solid black;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+
+
+        }
+
+        #LHS input {
+            width: 60%;
+            height: 5%;
+            margin: 4%;
+
+        }
+
+        #LHS>form {
+            padding-left: 10%;
+            padding-top: 10%;
+        }
+
+        #LHS>form>button {
+            background-color: white;
+            margin: 10% 5%;
+            border: 1px solid black;
+            color: #1ec370;
+        }
+
+        #RHS {
+            height: 95%;
+            width: 75%;
+            border: 1px solid black;
+            background-color: white;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            grid-template-columns: 20% 20% 20%;
+            grid-gap: 20px;
+
+
+        }
+
+        #RHS>div {
+            background-color: white;
+            height: 60%;
+            margin: 0%;
+            border: 1px solid black;
+
+        }
+
+        #RHS>div :nth-child(2) {
+            color: brown;
+            font-size: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="cont">
+        <div id="LHS">
+            <form>
+
+                <input type="text" placeholder="Name" id="name" value="">
+                <input type="text" placeholder="Price" id="price" value="">
+                <input type="text" placeholder="Description" id="desp" value="">
+                <input type="text" placeholder="Estimated Delivery" id="date" value="">
+                <input type="text" placeholder="Image url" value="">
+                <button id="btn">Add Product</button>
+            </form>
+        </div>
+
+        <div id="RHS">
+            <div>
+                <div>Rs.700</div>
+                <div>Jeans</div>
+                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, neque.</div>
+                <div>28/05/2021</div>
+            </div>
+            <div>
+                <div>Rs.700</div>
+                <div>Shirt</div>
+                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, neque.</div>
+                <div>28/05/2021</div>
+            </div>
+            <div>
+                <div>Rs.700</div>
+                <div>Pants</div>
+                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, neque.</div>
+                <div>28/05/2021</div>
+            </div>
+            <div>
+                <div>Rs.700</div>
+                <div>Lower</div>
+                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, neque.</div>
+                <div>28/05/2021</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script>
+
+    console.log("working")
+
+
+    var name = document.querySelector("#name").value
+    var price = document.querySelector("#price").value
+    var desp = document.querySelector("#desp").value
+    var date = document.querySelector("#date").value
+    var date = document.querySelector("#date").value
+    var btn = document.querySelector("button")
+    btn.addEventListener("click", addProduct)
+
+    function addProduct() {
+        console.log("working")
+        var addGrid = document.querySelector("RHS")
+        var cont = document.createElement("div")
+        cont.innerHTML = `<div>${price}</div>
+                <div>${name}</div>
+                <div>${desp}</div>
+                <div>${date}</div>`
+
+        addGrid.appendChild(cont)
+
+    }
+
+</script>
+
+
+
+
+
+</html>
